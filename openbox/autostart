@@ -1,4 +1,0 @@
-#!/bin/sh
-tint2 &
-xterm -geometry 100x30+20+60 &
-browser https://duckduckgo.com/ &
