@@ -1,0 +1,8 @@
+#!/bin/sh
+# Epiphany (GNOME Web, WebKitGTK) tuned for a container with no GPU
+export WEBKIT_DISABLE_SANDBOX_THIS_IS_DANGEROUS=1
+export WEBKIT_DISABLE_COMPOSITING_MODE=1
+export WEBKIT_DISABLE_DMABUF_RENDERER=1
+export GDK_BACKEND=x11
+export NO_AT_BRIDGE=1
+exec dbus-run-session -- epiphany --private-instance "$@"
